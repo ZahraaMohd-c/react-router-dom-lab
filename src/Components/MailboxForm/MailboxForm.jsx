@@ -24,7 +24,6 @@ const MailboxForm = (props) => {
             boxOwner: ''
         })
         navigate('/mailboxes')
-        console.log(formData)
     }
 
     return (
@@ -35,9 +34,9 @@ const MailboxForm = (props) => {
 
                 <label htmlFor="boxSize">Select a Box Size:</label>
                 <select name='boxSize' id='boxSize'  onChange={handleChange}>
-                    <option value={formData.boxSize='Small'}>Small</option>
-                    <option value={formData.boxSize='Medium'}>Medium</option>
-                    <option value={formData.boxSize='Large'}>Large</option>
+                    <option key={'Small'} value={formData.boxSize='Small'}>Small</option>
+                    <option key={'Medium'} value={formData.boxSize='Medium'}>Medium</option>
+                    <option key={'Large'} value={formData.boxSize='Large'}>Large</option>
                 </select>
 
                 <button type="submit">submit</button>
